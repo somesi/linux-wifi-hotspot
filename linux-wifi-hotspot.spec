@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:           linux-wifi-hotspot
-Version:        4.4.0
+Version:        4.7.1
 Release:        1%{?dist}
 Summary:        Feature-rich wifi hotspot creator for Linux which provides both GUI and command-line interface
 License:        BSD-2-Clause
@@ -12,7 +12,7 @@ BuildRequires:  gtk3-devel gcc gcc-c++ kernel-devel pkg-config make hostapd qren
 Requires:       procps-ng hostapd
 
 %description
-Feature-rich wifi hotspot creator for Linux which provides both GUI and command-line interface. It is also able to create a hotspot using the same wifi card which is connected to an AP already ( Similar to Windows 10).
+Feature-rich wifi hotspot creator for Linux which provides both GUI and command-line interface. It is also able to create a hotspot using the same wifi card which is connected to an AP already.
 
 %prep
 %autosetup -n %{name}-%{version} -p1
