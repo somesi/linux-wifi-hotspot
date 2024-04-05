@@ -10,3 +10,7 @@ sudo firewall-cmd --zone=trusted --add-masquerade
 sudo firewall-cmd --zone=trusted --add-interface=ap0
 ```
 Then launch 'Wifi Hotspot' from your apps menu to start using the app.
+
+Todo:
+- apply firewalld rules at install time
+- auto tag release
