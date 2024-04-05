@@ -3,7 +3,7 @@
 Name:           linux-wifi-hotspot
 Version:        4.7.1
 Release:        1%{?dist}
-Summary:        Feature-rich wifi hotspot creator for Linux which provides both GUI and command-line interface
+Summary:        Share your wifi.
 License:        BSD-2-Clause
 URL:            https://github.com/lakinduakash/linux-wifi-hotspot
 Source:         https://github.com/lakinduakash/linux-wifi-hotspot/archive/refs/tags/v%{version}.tar.gz
@@ -12,22 +12,40 @@ BuildRequires:  gtk3-devel gcc gcc-c++ kernel-devel pkg-config make hostapd qren
 Requires:       procps-ng hostapd
 
 %description
-Feature-rich wifi hotspot creator for Linux which provides both GUI and command-line interface. It is also able to create a hotspot using the same wifi card which is connected to an AP already.
+Share your wifi as a hotspot using a GUI or from the terminal.
 
 %prep
 %autosetup -n %{name}-%{version} -p1
 
 %build
-make
+%make_build
 
 %install
-make install PREFIX=%{buildroot}%{_prefix}
+%make_install
 
 %check
 
 %files
 %license LICENSE*
 %doc README.md
+%{_bindir}/create_ap
+%{_bindir}/wihotspot
+%{_bindir}/wihotspot-gui
+%{_prefix}/lib/systemd/system/create_ap.service
+%{_datadir}/applications/wihotspot.desktop
+%{_datadir}/bash-completion/completions/create_ap
+%{_datadir}/doc/create_ap/README.md
+%{_datadir}/icons/hicolor/256x256/apps/wihotspot.png
+%{_datadir}/icons/hicolor/48x48/apps/wihotspot.png
+%{_datadir}/icons/hicolor/512x512/apps/wihotspot.png
+%{_datadir}/icons/hicolor/64x64/apps/wihotspot.png
+%{_datadir}/icons/hicolor/scalable/apps/wihotspot.svg
+%{_datadir}/pixmaps/wihotspot.png
+%{_datadir}/polkit-1/actions/org.opensuse.policykit.wihotspot.policy
+%{_datadir}/polkit-1/rules.d/90-org.opensuse.policykit.wihotspot.rules
+%{_sysconfdir}/create_ap.conf
 
 
 %changelog
+* Fri Apr  5 2024 Sidney <sidneypro@proton.me> - 4.7.1
+- initial build
