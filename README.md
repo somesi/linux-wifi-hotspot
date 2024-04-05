@@ -6,7 +6,7 @@ Add this repo and install linux-wifi-hotspot:
 dnf copr enable zinix01/linux-wifi-hotspot
 sudo dnf install linux-wifi-hotspot
 ```
-Add firewalld support (see https://github.com/somesi/linux-wifi-hotspot/issues/2):
+Add firewalld support:
 ```
 sudo firewall-cmd --zone=FedoraWorkstation --add-masquerade --permanent
 sudo firewall-cmd --zone=trusted --add-masquerade --permanent
@@ -15,7 +15,7 @@ sudo firewall-cmd --zone=trusted --add-interface=ap0 --permanent
 Then launch 'Wifi Hotspot' from your apps menu to start using the app.
 
 Todo:
-- apply firewalld rules at install time
+- apply firewalld rules at install time (see https://github.com/somesi/linux-wifi-hotspot/issues/2)
 - auto tag release
 
 # Credits
