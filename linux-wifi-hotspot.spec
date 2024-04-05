@@ -3,7 +3,7 @@
 Name:           linux-wifi-hotspot
 Version:        4.7.1
 Release:        1%{?dist}
-Summary:        Share your wifi.
+Summary:        Share your wifi
 License:        BSD-2-Clause
 URL:            https://github.com/lakinduakash/linux-wifi-hotspot
 Source:         https://github.com/lakinduakash/linux-wifi-hotspot/archive/refs/tags/v%{version}.tar.gz
@@ -47,5 +47,5 @@ Share your wifi as a hotspot using a GUI or from the terminal.
 
 
 %changelog
-* Fri Apr  5 2024 Sidney <sidneypro@proton.me> - 4.7.1
+* Fri Apr  5 2024 Sidney <sidneypro@proton.me> - 4.7.1-1
 - initial build
