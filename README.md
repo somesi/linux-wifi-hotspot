@@ -1,5 +1,4 @@
-Linux Wifi Hotspot rpm builds for Fedora (https://github.com/lakinduakash/linux-wifi-hotspot)
-repo for the copr: https://copr.fedorainfracloud.org/coprs/zinix01/linux-wifi-hotspot/
+Linux Wifi Hotspot rpm builds for Fedora (https://github.com/lakinduakash/linux-wifi-hotspot), repo for the copr: https://copr.fedorainfracloud.org/coprs/zinix01/linux-wifi-hotspot/
 
 # Install
 Add this repo and install linux-wifi-hotspot:
