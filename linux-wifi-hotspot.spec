@@ -2,7 +2,7 @@
 
 Name:           linux-wifi-hotspot
 Version:        4.7.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Share your wifi
 License:        BSD-2-Clause
 URL:            https://github.com/lakinduakash/linux-wifi-hotspot
@@ -45,7 +45,14 @@ Share your wifi as a hotspot using a GUI or from the terminal.
 %{_datadir}/polkit-1/rules.d/90-org.opensuse.policykit.wihotspot.rules
 %{_sysconfdir}/create_ap.conf
 
+%post
+firewall-cmd --zone=FedoraWorkstation --add-masquerade --permanent --quiet
+firewall-cmd --zone=trusted --add-masquerade --permanent --quiet
+firewall-cmd --zone=trusted --add-interface=ap0 --permanent --quiet
 
 %changelog
-* Fri Apr  5 2024 Sidney <sidneypro@proton.me> - 4.7.1-1
+* Sun Apr 07 2024 Sidney <sidneypro@proton.me> - 4.7.1-2
+- the required firewalld changes are now made automatically on install
+
+* Sat Apr 06 2024 Sidney <sidneypro@proton.me> - 4.7.1-1
 - initial build
