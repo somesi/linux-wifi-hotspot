@@ -46,9 +46,10 @@ Share your wifi as a hotspot using a GUI or from the terminal.
 %{_sysconfdir}/create_ap.conf
 
 %post
-firewall-cmd --zone=FedoraWorkstation --add-masquerade --permanent --quiet
-firewall-cmd --zone=trusted --add-masquerade --permanent --quiet
-firewall-cmd --zone=trusted --add-interface=ap0 --permanent --quiet
+firewall-cmd --zone=FedoraWorkstation --add-masquerade --permanent --quiet || true
+firewall-cmd --zone=trusted --add-masquerade --permanent --quiet || true
+firewall-cmd --zone=trusted --add-interface=ap0 --permanent --quiet || true
+firewall-cmd --reload --quiet || true
 
 %changelog
 * Sun Apr 07 2024 Sidney <sidneypro@proton.me> - 4.7.1-2
