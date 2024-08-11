@@ -11,12 +11,12 @@ sudo dnf install linux-wifi-hotspot
 sudo firewall-cmd --zone=FedoraWorkstation --add-masquerade --permanent
 sudo firewall-cmd --zone=trusted --add-masquerade --permanent
 sudo firewall-cmd --zone=trusted --add-interface=ap0 --permanent
+sudo firewall-cmd --reload
 ```
 Then launch 'Wifi Hotspot' from your apps menu to start using the app.
 
 Todo:
-- apply firewalld rules at install time (see https://github.com/somesi/linux-wifi-hotspot/issues/2)
-- auto tag release
+- auto tag releases
 
 # Credits
 felix for the original spec file (https://copr.fedorainfracloud.org/coprs/felix/fedora-copr/package/linux-wifi-hotspot/)
