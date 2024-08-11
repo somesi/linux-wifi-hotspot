@@ -6,7 +6,7 @@ Add this repo and install linux-wifi-hotspot:
 dnf copr enable zinix01/linux-wifi-hotspot
 sudo dnf install linux-wifi-hotspot
 ```
-~Add firewalld support:~ Since 4.7.1-2, these are applied automatically on install
+~Add firewalld support:~ Since 4.7.1-2, these are applied automatically on install, but you can also apply them manaully if you are facing any connection issues:
 ```
 sudo firewall-cmd --zone=FedoraWorkstation --add-masquerade --permanent
 sudo firewall-cmd --zone=trusted --add-masquerade --permanent
