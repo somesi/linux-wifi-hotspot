@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
 Name:           linux-wifi-hotspot
-Version:        4.7.1
-Release:        2%{?dist}
+Version:        4.7.2
+Release:        1%{?dist}
 Summary:        Share your wifi
 License:        BSD-2-Clause
 URL:            https://github.com/lakinduakash/linux-wifi-hotspot
@@ -52,6 +52,9 @@ firewall-cmd --zone=trusted --add-interface=ap0 --permanent --quiet || true
 firewall-cmd --reload --quiet || true
 
 %changelog
+* Sun Aug 11 2024 Sidney <sidneypro@proton.me> - 4.7.2-1
+- updated to upstream version v4.7.2
+
 * Sun Apr 07 2024 Sidney <sidneypro@proton.me> - 4.7.1-2
 - the required firewalld changes are now made automatically on install
 
