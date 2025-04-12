@@ -2,7 +2,7 @@
 
 Name:           linux-wifi-hotspot
 Version:        4.7.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Share your wifi
 License:        BSD-2-Clause
 URL:            https://github.com/lakinduakash/linux-wifi-hotspot
