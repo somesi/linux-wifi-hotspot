@@ -18,7 +18,7 @@ Share your wifi as a hotspot using a GUI or from the terminal.
 %autosetup -n %{name}-%{version} -p1
 
 %build
-%make_build
+%make_build CFLAGS="`pkg-config --cflags gtk+-3.0` -Wno-incompatible-pointer-types"
 
 %install
 %make_install
@@ -52,6 +52,9 @@ firewall-cmd --zone=trusted --add-interface=ap0 --permanent --quiet || true
 firewall-cmd --reload --quiet || true
 
 %changelog
+* Sat Apr 12 2025 Sidney <sidneypro@proton.me> - 4.7.2-2
+- workaround for a build issue on Fedora 42
+
 * Sun Aug 11 2024 Sidney <sidneypro@proton.me> - 4.7.2-1
 - updated to upstream version v4.7.2
 
